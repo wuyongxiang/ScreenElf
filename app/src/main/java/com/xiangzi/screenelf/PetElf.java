@@ -171,7 +171,7 @@ public class PetElf extends View{
 						sampleView.setVisibility(GONE);
 						isPushing=false;
 						upTime=System.currentTimeMillis();
-						elasticX = (ElfUtil.getV(params.x));
+						elasticX = params.x>0?(ElfUtil.getV(params.x)):(-ElfUtil.getV(params.x));
 						elasticY = - ElfUtil.getV((params.y+params.height*1.3f)-sampleParams.y);
 						Log.e("elf",""+elasticY);
 						if(elasticY<0&&((params.y+params.height*1.3f)-sampleParams.y)>0){
